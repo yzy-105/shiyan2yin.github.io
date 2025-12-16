@@ -1,0 +1,228 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-size: cover;
+  backdrop-filter: blur(50px);
+  overflow: hidden;
+}
+.shang {
+  width: 80%;
+  height: 80%;
+  padding-left: 10%;
+}
+.cp {
+  float: left;
+  /* padding-top: 40px; */
+  width: 50%;
+  height: 100%;
+}
+.cp-bg {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.cp-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 300px;
+  background-image: url(./img/record0.jpg);
+  background-size: 100% 100%;
+}
+/* 唱片旋转 */
+.rotate-play {
+  animation: rotateAni 10s infinite linear;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+/* 定义rotateAni动画的样式 */
+@keyframes rotateAni {
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 歌曲部分 */
+.gq {
+  float: left;
+  width: 50%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.yymc {
+  font-size: 4rem;
+}
+.xia {
+  height: 20%;
+  padding: 0 20px;
+}
+.jindutiao {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.progress-played{
+  width: 0%;
+  height: 3px;
+  background-color: green;
+}
+.kzan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time {
+  color: white;
+  font-size: 1.3em;
+}
+.center-button {
+  display: flex;
+  align-items: center;
+}
+.center-icon {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+.playpause {
+  /* background-image: url(./img/暂停.png);
+    background-size: 100% 100%; */
+  width: 50px;
+  height: 50px;
+}
+/* 暂停的时候要显示继续播放图片 */
+.icon-play {
+  background-image: url(./img/继续播放.png);
+  background-size: 100% 100%;
+}
+.icon-pause {
+  background-image: url(./img/暂停.png);
+  background-size: 100% 100%;
+}
+.center-icon:hover,
+.right-icon:hover {
+  opacity: 0.7;
+}
+.center-icon:active,
+.right-icon:active {
+  opacity: 0.6;
+}
+.play {
+  background-image: url(./img/mode1.png);
+  background-size: 100% 100%;
+}
+.before {
+  background-image: url(./img/上一首.png);
+  background-size: 100% 100%;
+}
+
+.next {
+  background-image: url(./img/下一首.png);
+  background-size: 100% 100%;
+}
+.volumn {
+  background-image: url(./img/音量.png);
+  background-size: 100% 100%;
+}
+.volumn-togger {
+  display: block;
+  margin-top: 10px;
+}
+/* 右下角图标 */
+.right-button {
+  display: flex;
+}
+.right-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+.mv {
+  background-image: url(./img/MV.png);
+  background-size: 100% 100%;
+}
+.list {
+  background-image: url(./img/列表.png);
+  background-size: 100% 100%;
+}
+.speed {
+  color: white;
+}
+.speed:hover{
+  opacity: 0.7;
+}
+
+/* 列表 */
+.close-list{
+  width: 75%;
+  height: 100%;
+  /* background-color: pink; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.musicList-container{
+  width: 25%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  padding: 50px;
+  display: none;
+}
+.music-list-title{
+  font-size: 50px;
+}
+.musics-list div{
+  font-size: 30px;
+  padding: 7px 0;
+}
+.musics-list div:hover{
+  background-color: rgb(80, 76, 76);
+}
+.list-show{
+  animation: showAni;
+  animation-duration:1s ;
+  animation-fill-mode:forwards ;
+}
+
+.list-hide{
+  animation: hideAni;
+  animation-duration:1s ;
+  animation-fill-mode:forwards ;
+}
+@keyframes showAni{
+  from{
+      transform: translateX(100%);
+  }to{
+    transform: translateX(0);
+
+  }
+}
+@keyframes hideAni{
+  from{
+      transform: translateX(0);
+  }to{
+    transform: translateX(100%);
+  }
+}
